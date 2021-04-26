@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  /* min-width: 300px; */
 }
 
-.App-logo {
-  height: 40vmin;
+.logo {
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -11,6 +12,67 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+.contentImage {
+  width: 100%;
+}
+.content {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.container {
+  padding: 1em 0;
+  float: left;
+  width: 100%;
+  max-width: 25%;
+
+  margin: 60px 0;
+}
+
+/* NAVBAR */
+.navBarTop {
+  color: #ee5b50;
+  display: flex;
+  justify-content: space-between;
+  background-color: #dfe1e2;
+  padding: 1.8rem;
+  margin: -1.5rem;
+  height: 8px;
+}
+/* SEARCH BOX */
+.searchBox {
+  align-self: center;
+  margin: 2rem auto;
+  margin-bottom: -1rem;
+  line-height: 35px;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.genreBox {
+  align-self: center;
+  margin: 0.4rem 0 0 20%;
+  line-height: 100%;
+  width: 60%;
+}
+
+.yearBox {
+  align-self: center;
+  margin: 1.5rem 0 0 20%;
+  line-height: 100%;
+  width: 60%;
+}
+
+.searchBox input {
+  width: 99%;
+  height: 50px;
+  color: #333;
+  margin: 0;
+  text-align: left;
 }
 
 .App-header {

@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar";
+import SongCard from "./components/SongCard";
 
 const App = () => {
   const [songs, setSongs] = useState([]);
@@ -24,9 +25,6 @@ const App = () => {
     setGenres(result?.genres);
   };
 
-  console.log("songs", songs);
-  console.log("genres", genres);
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -34,11 +32,7 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <div>
-        {genres.map((g) => (
-          <div key={g.id}>{g.name}</div>
-        ))}
-      </div>
+      <SongCard />
     </div>
   );
 };
