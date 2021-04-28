@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --verbose --env=jsdom --transformIgnorePatterns 'node_modules/(?!(<package-need-to-transform>|<other-package-need-to-transform>)/)'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "react-test-renderer": "^17.0.2"
   }
 }
