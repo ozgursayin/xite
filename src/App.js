@@ -1,8 +1,10 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import NavBar from "./components/NavBar";
 import SearchBox from "./components/SearchBox";
+
+import "./design.css";
 
 const App = () => {
   const [songs, setSongs] = useState([]);
@@ -22,7 +24,7 @@ const App = () => {
         setIsLoaded(true);
       })
       .catch((error) => {
-        console.log("Error:", error);
+        console.error("Error:", error);
         setError(error.message);
         setIsLoaded(true);
       });
@@ -35,7 +37,12 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <SearchBox songs={songs} genres={genres} />
+      <SearchBox
+        songs={songs}
+        genres={genres}
+        isLoaded={isLoaded}
+        error={error}
+      />
     </div>
   );
 };

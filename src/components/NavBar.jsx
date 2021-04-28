@@ -1,11 +1,12 @@
 import React from "react";
-import "../App.css";
+
 import logo from "./xitelogo.png";
+import "../design.css";
 
 const NavBar = () => {
   return (
     <div className="navBarTop">
-      <img className="logo" src={logo} alt="" />
+      <img className="logo" src={logo} alt="XITE" />
     </div>
   );
 };
