@@ -109,7 +109,7 @@ body {
   transition: all 0.3s ease-out;
 }
 
-div.no-touch .boxInner:hover .titleBox,
+div.noTouch .boxInner:hover .titleBox,
 div.touch .boxInner.touchFocus .titleBox {
   margin-bottom: 0px;
   height: 30%;

@@ -4,7 +4,7 @@ import "../design.css";
 const SongCard = ({ song }) => {
   return (
     <>
-      <div className="no-touch">
+      <div className="noTouch">
         <div className="box">
           <div className="boxInner">
             <img src={`${song.image_url}`} alt="img" />
