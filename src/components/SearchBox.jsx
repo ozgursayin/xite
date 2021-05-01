@@ -36,6 +36,28 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
     filteredSongsByYears
   );
 
+  const loadingMessage = () => {
+    return <div className="screenMessage">Loading...</div>;
+  };
+
+  const errorMessage = () => {
+    return <div className="screenMessage">{error}</div>;
+  };
+
+  const songCards = () => {
+    return (
+      <div>
+        {filteredSongsByGenres.map((song) => (
+          <SongCard song={song} key={song.id} />
+        ))}
+      </div>
+    );
+  };
+
+  const noSongFoundMessage = () => {
+    return <div className="screenMessage"> No songs found...</div>;
+  };
+
   return (
     <div className="content">
       <input
@@ -66,19 +88,13 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
           styles={selectOptionStyles}
         />
       </div>
-      {!isLoaded ? (
-        <div className="screenMessage">Loading...</div>
-      ) : error ? (
-        <div className="screenMessage">{error}</div>
-      ) : filteredSongsByGenres.length > 0 ? (
-        <div>
-          {filteredSongsByGenres.map((song) => (
-            <SongCard song={song} key={song.id} />
-          ))}
-        </div>
-      ) : (
-        <div className="screenMessage"> No songs found...</div>
-      )}
+      {!isLoaded
+        ? loadingMessage()
+        : error
+        ? errorMessage()
+        : filteredSongsByGenres.length > 0
+        ? songCards()
+        : noSongFoundMessage()}
     </div>
   );
 };
