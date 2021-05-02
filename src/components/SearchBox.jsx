@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Select from "react-select";
 
 import SongCard from "./SongCard";
@@ -9,6 +9,11 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedYears, setSelectedYears] = useState([]);
   const [selectedGenres, setSelectedGenres] = useState([]);
+
+  const inputRef = useRef();
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const handleChangeQuery = (e) => {
     setSearchQuery(e.target.value);
@@ -54,7 +59,7 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
     );
   };
 
-  const noSongFoundMessage = () => {
+  const noSongsFoundMessage = () => {
     return <div className="screenMessage"> No songs found...</div>;
   };
 
@@ -62,6 +67,7 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
     <div className="content">
       <input
         className="searchBox"
+        ref={inputRef}
         type="search"
         placeholder="Search Songs or Artists..."
         onChange={handleChangeQuery}
@@ -94,7 +100,7 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
         ? errorMessage()
         : filteredSongsByGenres.length > 0
         ? songCards()
-        : noSongFoundMessage()}
+        : noSongsFoundMessage()}
     </div>
   );
 };
