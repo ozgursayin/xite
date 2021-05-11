@@ -7,11 +7,11 @@ const SongCard = ({ song }) => {
       <div className="noTouch">
         <div className="box">
           <div className="boxInner">
-            <img src={`${song.image_url}`} alt="img" />
+            <img src={song.image_url} alt="img" />
             <div className="titleBox">
-              {`${song.title}`} <br />
+              {song.title} <br />
               <br />
-              {`${song.artist}`}
+              {song.artist}
             </div>
           </div>
         </div>
