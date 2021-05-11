@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import NavBar from "./components/NavBar";
-import SearchBox from "./components/SearchBox";
+import SearchBox from "./components/SearchBox/SearchBox";
 
 import "./design.css";
 
