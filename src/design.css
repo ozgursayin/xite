@@ -7,8 +7,8 @@ body {
 }
 
 .screenMessage {
-  margin-top: 100px;
-  font-size: 40px;
+  margin-top: 7em;
+  font-size: 2.8em;
 }
 
 .App {
@@ -25,27 +25,26 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-color: #dfe1e2;
-  padding: 10px;
+  padding: 0.7em;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0.7em;
 }
 
 .searchBox {
   align-self: center;
-  padding: 10px;
-  margin: 0 0 10px 0;
+  padding: 0.7em;
+  margin: 0 0 0.7em 0;
   width: 80%;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 0.7em;
+  font-size: 1.1em;
 }
 
 .searchBox input {
   width: 99%;
-  height: 50px;
   color: #333;
   margin: 0;
   text-align: left;
@@ -65,7 +64,7 @@ body {
 
 .wrap {
   overflow: hidden;
-  margin: 10px;
+  margin: 0.7em;
 }
 
 .box {
@@ -77,10 +76,10 @@ body {
 
 .boxInner {
   position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
+  left: 0.7em;
+  right: 0.7em;
+  top: 0.7em;
+  bottom: 0.7em;
   overflow: hidden;
 }
 
@@ -111,7 +110,7 @@ body {
 
 div.noTouch .boxInner:hover .titleBox,
 div.touch .boxInner.touchFocus .titleBox {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   height: 30%;
 }
 
@@ -125,7 +124,7 @@ div.touch .boxInner.touchFocus .titleBox {
   .searchBox {
     width: 100%;
   }
-  
+
   .selectElements {
     width: 100%;
     flex-direction: column;
