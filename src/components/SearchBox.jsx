@@ -12,7 +12,7 @@ const SearchBox = ({ songs, genres, isLoaded, error }) => {
 
   const inputRef = useRef();
   useEffect(() => {
-    inputRef.current.focus();
+    inputRef?.current?.focus();
   }, []);
 
   const handleChangeQuery = (e) => {
